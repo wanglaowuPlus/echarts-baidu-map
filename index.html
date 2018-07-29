@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<style type="text/css">
+	body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";min-width: 1310px;};
+	.sec_list{
+		min-width: 1310px;
+	}
+	.txtMarquee-top{ width:100%;height:180px;  overflow:hidden; position:relative;  border-radius: 5px;  padding-left: 10px; padding-right: 10px;}
+	.txtMarquee-top .hd{ overflow:hidden;  height:25px;  padding:5px 10px;  }
+	/*.txtMarquee-top .bd{ padding:15px;  }*/
+		.txtMarquee-top .infoList {  padding: 0 ;}
+
+	.txtMarquee-top .infoList li{ height:25px; line-height:25px; padding: 0;width: 85%;}
+	.txtMarquee-top .infoList li .date{ float:left; color:#40b6bb;  }
+	a{
+		 text-decoration:none;
+		 color: #40b6bb;
+		 float: right;
+	}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=sLOU89XkyfMfg3yGn5epURe6nSGXMML0"></script>
+	<title>地图展示</title>
+</head>
+<body>
+	<div id="allmap" style="">
+	
+	</div>
+	<div class="sec_list" style="display: ;">
+		<!--漏洞发现人-->
+		<div class="finder_list">
+			<div class="sec_list_title">
+				漏洞检测人
+			</div>
+			<div class="finder_list_head">
+				<div class="finder_list_num" style="font-size: ;">检测人</div>
+				<div class="finder_list_show" style="font-size: ;">发现漏洞个数</div>
+			</div>
+			<div class="txtMarquee-top" >
+				<div class="bd" style="margin-top: 10px;">
+					<ul class="infoList" id="finders">
+						
+					</ul>
+				</div>
+			</div>	
+		</div>
+		<!--漏洞类型-->
+		<div class="vul_type">
+			<div class="sec_list_title">
+				漏洞类型详情
+			</div>
+			<div class="finder_list_head">
+				<div class="finder_list_num" style="font-size: ;">漏洞类型</div>
+				<div class="finder_list_show" style="font-size: ;">发现漏洞个数</div>
+			</div>
+			
+			<div class="txtMarquee-top" >
+				<div class="bd" style="margin-top: 10px;">
+					<ul class="infoList" id='vulTypes'>
+						
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--目标-->
+		<div class="vul_target">
+			<div class="sec_list_title">
+				检测目标详情
+			</div>
+			<div class="finder_list_head">
+				<div class="finder_list_num" style="font-size: ;">检测目标</div>
+				<div class="finder_list_show" style="font-size: ;">发现漏洞个数</div>
+			</div>
+			
+			<div class="txtMarquee-top" >
+				<div class="bd" style="margin-top: 10px;">
+					<ul class="infoList" id="targets">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--单位-->
+		<div class="vul_address">
+			<div class="sec_list_title">
+				检测单位详情
+			</div>
+			<div class="finder_list_head">
+				<div class="finder_list_num" style="font-size: ;">检测目标单位</div>
+				<div class="finder_list_next" style="font-size: ;">发现漏洞个数</div>
+				<div class="finder_list_next" style="font-size: ;">攻击地址</div>
+
+			</div>
+			
+			<div class="txtMarquee-top" >
+				<div class="bd" style="margin-top: 10px;">
+					<ul class="infoList" id="vulDetails">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/jquery1.42.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/echarts.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/bmap.js"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</html>
